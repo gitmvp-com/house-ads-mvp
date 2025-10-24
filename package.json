@@ -1,0 +1,20 @@
+{
+  "name": "house-ads-mvp",
+  "version": "1.0.0",
+  "description": "MVP version of discourse-adplugin focusing on House Ads management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["ads", "advertising", "house-ads", "ad-management"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
