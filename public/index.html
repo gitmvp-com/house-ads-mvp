@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Ads Management - MVP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏠 House Ads Management</h1>
+      <p class="subtitle">Create and manage your custom advertisements</p>
+    </header>
+
+    <div class="main-content">
+      <!-- Ad Creation/Edit Form -->
+      <section class="form-section">
+        <h2 id="form-title">Create New House Ad</h2>
+        <form id="ad-form">
+          <input type="hidden" id="ad-id">
+          
+          <div class="form-group">
+            <label for="ad-name">Ad Name *</label>
+            <input 
+              type="text" 
+              id="ad-name" 
+              placeholder="e.g., Summer Sale Banner" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="ad-html">HTML Content *</label>
+            <textarea 
+              id="ad-html" 
+              rows="6" 
+              placeholder="Enter your HTML code here..." 
+              required
+            ></textarea>
+            <small>You can use any HTML/CSS. Example: &lt;div class='house-ad'&gt;Your Ad&lt;/div&gt;</small>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="visible-logged-in" checked>
+              Visible to logged-in users
+            </label>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="visible-anons" checked>
+              Visible to anonymous users
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn">Create Ad</button>
+            <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Ad List -->
+      <section class="ads-list-section">
+        <h2>Your House Ads</h2>
+        <div id="ads-list" class="ads-list">
+          <p class="empty-state">No ads created yet. Create your first ad above!</p>
+        </div>
+      </section>
+
+      <!-- Ad Preview -->
+      <section class="preview-section">
+        <h2>Ad Display Demo</h2>
+        <p class="info-text">This shows how your ads appear to visitors:</p>
+        <div id="ad-display" class="ad-display-container">
+          <p class="empty-state">No ads to display</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
